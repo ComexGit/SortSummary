@@ -7,11 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SortsHandler.h"
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        NSArray *array = @[@5, @2, @7, @1, @6, @3, @9, @4, @8];
+        
+        NSLog(@"冒泡排序：%@", [SortsHandler bubbleSort:array]);
+        NSLog(@"选择排序：%@", [SortsHandler selectionSort:array]);
+        NSLog(@"插入排序：%@", [SortsHandler insertionSort:array]);
+        NSLog(@"希尔排序：%@", [SortsHandler shellSort:array]);
+//        NSLog(@"冒泡排序：%@", [SortsHandler bubbleSort:array]);
+//        NSLog(@"冒泡排序：%@", [SortsHandler bubbleSort:array]);
+//        NSLog(@"冒泡排序：%@", [SortsHandler bubbleSort:array]);
     }
     return 0;
 }
