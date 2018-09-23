@@ -29,10 +29,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSArray *) insertionSort:(NSArray *)array;
 
 /**
- 希尔排序 O(n^1.3) 不稳定
+ 希尔排序 O(n^1.3) 不稳定 缩小增量排序
  */
 + (NSArray *) shellSort:(NSArray *)array;
 
+/**
+ 归并排序 O(nlogn) 稳定
+ */
++ (NSArray *) mergeSort:(NSArray *)array;
 @end
 
 NS_ASSUME_NONNULL_END
