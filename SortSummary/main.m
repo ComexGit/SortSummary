@@ -20,8 +20,8 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"选择排序：%@", [SortsHandler selectionSort:array]);
 //        NSLog(@"插入排序：%@", [SortsHandler insertionSort:array]);
 //        NSLog(@"希尔排序：%@", [SortsHandler shellSort:array]);
-        NSLog(@"归并排序：%@", [SortsHandler mergeSort:array]);
-//        NSLog(@"冒泡排序：%@", [SortsHandler bubbleSort:array]);
+//        NSLog(@"归并排序：%@", [SortsHandler mergeSort:array]);
+//        NSLog(@"快速排序：%@", [SortsHandler quickSortArray:array withLeftIndex:0 andRightIndex:array.count-1]);
 //        NSLog(@"冒泡排序：%@", [SortsHandler bubbleSort:array]);
     }
     return 0;

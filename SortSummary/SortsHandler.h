@@ -37,6 +37,16 @@ NS_ASSUME_NONNULL_BEGIN
  归并排序 O(nlogn) 稳定
  */
 + (NSArray *) mergeSort:(NSArray *)array;
+
+
+/**
+ 快速排序 O(nlogn) 
+
+ @param array <#array description#>
+ @return <#return value description#>
+ */
++ (NSArray *)quickSort:(NSMutableArray *)array;
+
 @end
 
 NS_ASSUME_NONNULL_END
