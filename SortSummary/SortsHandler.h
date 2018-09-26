@@ -38,14 +38,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSArray *) mergeSort:(NSArray *)array;
 
-
 /**
- 快速排序 O(nlogn) 
-
- @param array <#array description#>
- @return <#return value description#>
+ 快速排序 O(nlogn) 不稳定
+ 在最优情况下，递归树深度log2n。（数量级也属于logn）partition每次均匀划分，如果排序n个关键字，递归树深度为.log2n. + 1(.x.表示对x向下取整)，即仅需递归log2n次。
+ 在最坏情况下，递归树深度n。待排序的序列为正序或者逆序（即有序），每次划分得到的序列只会减少一个记录，另一个为空序列。此时的递归树，是一棵斜树。
  */
-+ (NSArray *)quickSort:(NSMutableArray *)array;
++ (NSArray *)quickSort:(NSArray *)array;
 
 @end
 

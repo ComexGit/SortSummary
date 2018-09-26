@@ -119,25 +119,25 @@
     return resultArray;
 }
 
-+ (void)quickSort:(NSMutableArray *)array {
-    
-    
++ (NSArray *)quickSort:(NSArray *)array {
+    NSMutableArray *rawArray = [array mutableCopy];
+    return [self quickSortWithArray:rawArray low:0 high:array.count-1];
 }
 
-+ (void)quickSortWithArray:(NSMutableArray *)array low:(int)low high:(int)high
++ (NSArray *)quickSortWithArray:(NSMutableArray *)array low:(NSInteger)low high:(NSInteger)high
 {
     if(array == nil || array.count == 0){
-        return;
+        return nil;
     }
     if (low >= high) {
-        return;
+        return nil;
     }
     
     //取中值
-    int middle = low + (high - low)/2;
+    NSInteger middle = low + (high - low)/2;
     NSNumber *prmt = array[middle];
-    int i = low;
-    int j = high;
+    NSInteger i = low;
+    NSInteger j = high;
     
     //开始排序，使得left<prmt 同时right>prmt
     while (i <= j) {
@@ -157,8 +157,9 @@
         }
     }
 
-    [self quickSort:array low:low high:j];
-    [self quickSort:array low:i high:high];
+    [self quickSortWithArray:array low:low high:j];
+    [self quickSortWithArray:array low:i high:high];
+    return array;
 }
 
 @end
